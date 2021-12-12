@@ -6,6 +6,22 @@ import {IconLabel} from './IconLabel';
 import {TextButton} from './TextButton';
 import {LineDivider} from './LineDivider';
 import {Rating} from './Rating';
+import {StepperInput} from './StepperInput';
+import {FooterTotal} from './FooterTotal';
+import {CardItem} from './CardItem';
+import {FormInput} from './FormInput';
+import {FormInputCheck} from './FormInputCheck';
 
  
-export {Header, IconButton, CartQuantity,IconLabel, TextButton, LineDivider, Rating}
+export {Header,
+     IconButton,
+     CartQuantity,
+    IconLabel,
+     TextButton,
+     LineDivider,
+     Rating,
+     StepperInput,
+     FooterTotal,
+     CardItem,
+     FormInput,
+     FormInputCheck}

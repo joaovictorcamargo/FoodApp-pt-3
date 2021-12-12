@@ -6,13 +6,24 @@ import {
     ScrollView
 } from 'react-native';
 import {FONTS, COLORS, SIZES,icons, images, dummyData} from '../../constants';
-import {Header, IconButton, CartQuantity, IconLabel, TextButton, lineStyle, Rating, LineDivider} from '../../components';
+import {
+    Header,
+    IconButton,
+    CartQuantity,
+    IconLabel,
+    TextButton,
+    lineStyle,
+    Rating,
+    LineDivider,
+    StepperInput
+    } from '../../components';
 
 
-const FoodDetail = () => {
+const FoodDetail = ({navigation}) => {
 
     const [foodItem, setFoodItem] = useState(dummyData.vegBiryani)
     const [selectedSize, setSelectedSize] = useState("")
+    const [qty, setQty] = useState(1)
 
     function renderHeader() {
         return (
@@ -331,6 +342,32 @@ const FoodDetail = () => {
                 paddingBottom: SIZES.radius
             }}
             >
+
+                {/*Stepper Input*/}
+                <StepperInput
+                value={qty}
+                onAdd={() => setQty (qty + 1)}
+                onMinus={() => {
+                    if(qty > 1) { setQty (qty - 1) 
+                    }
+                }}
+                />
+
+                {/*Text Button*/}
+                <TextButton
+                buttonContainerStyle={{
+                    flex: 1,
+                    flexDirection: 'row',
+                    height: 60,
+                    marginLeft: SIZES.radius,
+                    paddingHorizontal: SIZES.radius,
+                    borderRadius: SIZES.radius,
+                    backgroundColor: COLORS.primary
+                }}
+                label="Buy Now"
+                label2="$15.99"
+                onPress={() => navigation.navigate("MyCart")}
+                />
 
             </View>
 
