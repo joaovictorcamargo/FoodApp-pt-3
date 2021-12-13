@@ -11,6 +11,8 @@ import {FooterTotal} from './FooterTotal';
 import {CardItem} from './CardItem';
 import {FormInput} from './FormInput';
 import {FormInputCheck} from './FormInputCheck';
+import {RadioButton} from './RadioButton';
+import {TextIconButton} from './TextIconButton';
 
  
 export {Header,
@@ -24,4 +26,6 @@ export {Header,
      FooterTotal,
      CardItem,
      FormInput,
-     FormInputCheck}
+     FormInputCheck,
+     RadioButton,
+     TextIconButton}
